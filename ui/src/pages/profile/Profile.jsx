@@ -18,7 +18,7 @@ export default function Profile() {
       setUser(res.data)
     };
     fetchUser()
-  }, []);
+  }, [username]);
 
   // http://localhost:3000/api/users?userId=${post.userId}
 

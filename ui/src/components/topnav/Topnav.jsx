@@ -1,7 +1,7 @@
-import "./topnav.css"
-import Logo from "./assets/topnav-logo.png"
-import pfp from "./assets/kianna.jpg"
-import { Link } from "react-router-dom"
+import "./topnav.css";
+import Logo from "./assets/topnav-logo.png";
+import pfp from "./assets/kianna.jpg";
+import { Link } from "react-router-dom";
 
 export default function Topnav() {
   return (
@@ -15,7 +15,7 @@ export default function Topnav() {
               <img src={pfp} alt="profile" id="topnav-pfp"/>
             </div>
             <p className="profile-image-text">
-              <button>
+              <button className="logout-btn">
                 Logout
               </button>
             </p>

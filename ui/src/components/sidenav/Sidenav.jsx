@@ -40,7 +40,7 @@ export default function Sidenav() {
                     <img src={FireIcon} alt="" id="fire icon"/>
                     <p className="sidenav-text">Activities</p>
                 </div> */}
-                <Link to="/" id="link-text">
+                <Link to="/profile" id="link-text">
                     <div className="sidenav-link">
                         <img src={SettingsIcon} alt="" id="profile icon"/>
                         <p className="sidenav-text">Profile</p>

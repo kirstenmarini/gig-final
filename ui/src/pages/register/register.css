@@ -21,11 +21,11 @@
     justify-content: center;
   }
   
-  .login-image {
-    font-size: 50px;
-    font-weight: 800;
-    color: #1775ee;
-    margin-bottom: 10px;
+  #login-image {
+    position: fixed;
+    left:0;
+    top:0;
+    width: 50%;
   }
   
   .login-input-wrapper{

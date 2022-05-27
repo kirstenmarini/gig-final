@@ -34,3 +34,12 @@
 .profile-container {
     margin-right: 5rem;
 }
+
+.logout-btn {
+    background-color: transparent;
+    color: #FFF;
+    border: none;
+    font-weight: 500px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
