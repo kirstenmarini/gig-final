@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const helmet = require('helmet');
 const morgan = require('morgan');
-const auth = require("./middleware/auth");
+// const auth = require("./middleware/auth");
 var cors = require('cors')
 
 // routes
@@ -22,7 +22,9 @@ mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopolo
 // cors portion
 app.use(cors())
 
-app.get('http://localhost:3000/:id', auth, function (req, res, next) {
+app.get('http://localhost:3000/:id', 
+// auth,
+ function (req, res, next) {
   res.json({msg: 'This is CORS-enabled for all origins!'})
 })
 
@@ -36,8 +38,12 @@ app.use(helmet());
 app.use(morgan("common"));
 
 app.use('/api/auth', authRoute);
-app.use("/api/posts", auth, postRoute);
-app.use('/api/users', auth, userRoute);
+app.use("/api/posts", 
+// auth,
+ postRoute);
+app.use('/api/users', 
+// auth, 
+userRoute);
 
 
 app.listen(3000, () => {

@@ -21,11 +21,10 @@ export default function Register() {
                     <input placeholder="Username" className="login-input" />
                     <input placeholder="Password" className="login-input" />
                     <input placeholder="Confirm Password" className="login-input" />
-                    <div className="button-container">
+                    <div className="button-container-reg">
                         <Link to="/login">
-                            <button className="login-register-button">Log into your Account</button>
+                            <button className="login-button-reg">Sign up</button>
                         </Link>
-                        <button className="login-button">Sign up</button>
                     </div>
                 </div>
             </div>

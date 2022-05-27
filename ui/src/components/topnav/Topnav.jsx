@@ -14,11 +14,13 @@ export default function Topnav() {
             <div>
               <img src={pfp} alt="profile" id="topnav-pfp"/>
             </div>
-            <p className="profile-image-text">
-              <button className="logout-btn">
-                Logout
-              </button>
-            </p>
+            <Link to="/login">
+              <p className="profile-image-text">
+                <button className="logout-btn">
+                  Logout
+                </button>
+              </p>
+              </Link>
           </div>
         </div>
     </div>

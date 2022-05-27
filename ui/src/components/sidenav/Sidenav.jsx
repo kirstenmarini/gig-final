@@ -1,7 +1,4 @@
 import FeedIcon from "./icons/feed-icon.svg";
-// import ForumIcon from "./icons/forum-icon.svg";
-// import HeartIcon from "./icons/heart-icon.svg";
-// import FireIcon from "./icons/fire-icon.svg";
 import SettingsIcon from "./icons/settings-icon.svg";
 import Search from "./icons/search-icon.svg";
 
@@ -19,8 +16,6 @@ export default function Sidenav() {
                     className="search-input"
                 />
             </div>
-
-            {/* fix the hover designs for the links */}
             <div className="sidenav-links">
                 <Link to="/" id="link-text">
                     <div className="sidenav-link">
@@ -28,19 +23,7 @@ export default function Sidenav() {
                         <p className="sidenav-text">Feed</p>
                     </div>
                 </Link>
-                {/* <div className="sidenav-link">
-                    <img src={ForumIcon} alt="" id="forum icon"/>
-                    <p className="sidenav-text">Forum</p>
-                </div>
-                <div className="sidenav-link">
-                    <img src={HeartIcon} alt="" id="heart icon"/>
-                    <p className="sidenav-text">Liked</p>
-                </div>
-                <div className="sidenav-link">
-                    <img src={FireIcon} alt="" id="fire icon"/>
-                    <p className="sidenav-text">Activities</p>
-                </div> */}
-                <Link to="/profile" id="link-text">
+                <Link to="/profilecoded" id="link-text">
                     <div className="sidenav-link">
                         <img src={SettingsIcon} alt="" id="profile icon"/>
                         <p className="sidenav-text">Profile</p>
