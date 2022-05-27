@@ -11,8 +11,8 @@ export default function Feed( {username}) {
   useEffect( () => {
     const fetchPosts = async () => {
       const res = username
-      ? await axios.get("http://localhost:3000/api/posts/profile/" + username)
-      : await axios.get("http://localhost:3000/api/posts/timeline/628b281fa056f6f86e0c67a1");
+      ? await axios.get("http://localhost:3000/api/posts/timeline/" + username)
+      : await axios.get("http://localhost:3000/api/posts/timeline/628b281fa056f6f86e0c67a1")
       setPosts(res.data)
     }
     fetchPosts();

@@ -3,8 +3,8 @@ import Topnav from "../../components/topnav/Topnav";
 import Sidenav from "../../components/sidenav/Sidenav";
 import Feed from "../../components/feed/Feed";
 
-export default function Profile() {
-  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+export default function ProfileCoded() {
+  // const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
   return (
     <>
@@ -17,23 +17,21 @@ export default function Profile() {
               <img
                 className="profile-cover-img"
                 src={
-                   `${PF}/post/12.jpg`
-                  // `http://localhost:3001/assets/person/display-banner.jpg`
+                  `http://localhost:3001/assets/person/display-banner.jpg`
                 }
                 alt="profile-banner"
               />
               <img
                 className="profile-user-pfp"
                 src={
-                  `${PF}/person/1.jpg`
-                  // `http://localhost:3001/assets/person/display-avatar.jpg`
+                  `http://localhost:3001/assets/person/display-avatar.jpg`
                 }
                 alt="profile-dp"
               />
             </div>
             <div className="profile-info">
-                <h4 className="profile-username">m</h4>
-                <span className="profile-bio">graduating is fun</span>
+                <h4 className="profile-username">Kianna Zalameda</h4>
+                <span className="profile-bio">3 BS ITE | Exercising once every three days!</span>
             </div>
           </div>
           <div className="profile-content">

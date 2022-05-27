@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const User = require('../models/User')
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
 
 // register portion
 router.post('/register', async (req, res) => {
@@ -20,16 +20,16 @@ router.post('/register', async (req, res) => {
 		// save user and return
 		const user = await newUser.save();
 		const email = req.body.email
-		const token = jwt.sign({
-				user_id: user._id,
-				email
-			},
-			process.env.JWT_SECRET, {
-				expiresIn: "6h",
-			}
-		);
+		// const token = jwt.sign({
+		// 		user_id: user._id,
+		// 		email
+		// 	},
+		// 	process.env.JWT_SECRET, {
+		// 		expiresIn: "6h",
+		// 	}
+		// );
 		// save user token
-		user.token = token;
+		// user.token = token;
 
 
 		res.status(200).json(user);
@@ -46,16 +46,16 @@ router.post('/login', async (req, res) => {
 
 		const validPassword = await bcrypt.compare(req.body.password, user.password)
 		if (user && (await bcrypt.compare(req.body.password, user.password))) {
-      const email = req.body.email
-			const token = jwt.sign({
-					user_id: user._id,
-					email
-				},
-				process.env.JWT_SECRET, {
-					expiresIn: "6h",
-				}
-			);
-			user.token = token
+    //   const email = req.body.email
+	// 		const token = jwt.sign({
+	// 				user_id: user._id,
+	// 				email
+	// 			},
+	// 			process.env.JWT_SECRET, {
+	// 				expiresIn: "6h",
+	// 			}
+	// 		);
+	// 		user.token = token
       return res.status(200).json(user);
 		} else {
       return res.status(400).send("wrong password")

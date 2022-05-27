@@ -44,7 +44,7 @@ export default function Post( { post }) {
                   <p className="post-top-username">
                     {user.username}
                   </p>
-                  <p className="post-top-dateposted">Sample</p>
+
                   </div>
                 </div>
               </Link>
@@ -73,10 +73,10 @@ export default function Post( { post }) {
               className="like-icon"
               onClick={likeHandler}
               />
-              <span className="likes-amount">{like} reaction/s!</span>
+              <span className="likes-amount">{like} react!</span>
             </div>
             <div className="post-bottom-right">
-              <div className="post-bottom-right-comment-label">{post.like} Comments</div>
+              <div className="post-bottom-right-comment-label">{post.comment} Comments</div>
             </div>
           </div>
         </div>
